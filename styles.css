@@ -1,0 +1,118 @@
+/* Resets for consistent styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f8f8f8; /* Adjust the background color as needed */
+}
+
+/* Overall layout and typography */
+.container {
+    font-family: 'Arial', sans-serif;
+    max-width: 960px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Stats and Equipment sections */
+.stats, .equipment {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stat-row, .equipment-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+label {
+    width: 150px; /* Adjust label width as needed to fit your layout */
+}
+
+input[type="number"], select {
+    width: calc(100% - 160px); /* Adjust input/select width as needed */
+    padding: 5px;
+}
+
+/* Non-interactive stat display */
+.stat-display {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    background: #eee;
+    margin-bottom: 10px;
+}
+
+.stat-display span {
+    text-align: right;
+    padding-right: 10px; /* Aligns text to the right within the stat display box */
+}
+
+/* Equipment checkboxes */
+.equipment-row input[type='checkbox'] {
+    margin-left: 10px;
+}
+
+/* Buttons for incrementing and decrementing stats */
+.button-inc-dec {
+    background-color: #f2f2f2;
+    border: 1px solid #dcdcdc;
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.button-inc-dec:hover {
+    background-color: #e8e8e8;
+}
+
+/* Style for the class selector dropdown */
+.class-selector select {
+    padding: 5px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Additional placeholder styles for stats like HP, Stamina, etc. */
+.placeholder-stat {
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+/* Active effects section */
+.active-effects {
+    margin-top: 20px;
+    padding: 10px;
+    background: #e9e9e9;
+    border: 1px solid #d9d9d9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .stat-row, .equipment-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .stat-row label, .equipment-row label {
+        margin-bottom: 5px;
+    }
+}
