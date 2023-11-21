@@ -13,6 +13,108 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: "Deprived", level: 6, vitality: 11, attunement: 11, endurance: 11, strength: 11, dexterity: 11, resistance: 11, intelligence: 11, faith: 11, humanity: 0, total: 88 }
     ];
 
+    const vitalityTable = [
+        { vitality: 1, hp: 400, individualGain: '-' },
+        { vitality: 2, hp: 415, individualGain: 15 },
+        { vitality: 3, hp: 433, individualGain: 18 },
+        { vitality: 4, hp: 451, individualGain: 18 },
+        { vitality: 5, hp: 471, individualGain: 20 },
+        { vitality: 6, hp: 490, individualGain: 19 },
+        { vitality: 7, hp: 511, individualGain: 21 },
+        { vitality: 8, hp: 530, individualGain: 19 },
+        { vitality: 9, hp: 552, individualGain: 22 },
+        { vitality: 10, hp: 572, individualGain: 20 },
+        { vitality: 11, hp: 594, individualGain: 22 },
+        { vitality: 12, hp: 616, individualGain: 22 },
+        { vitality: 13, hp: 638, individualGain: 22 },
+        { vitality: 14, hp: 658, individualGain: 20 },
+        { vitality: 15, hp: 682, individualGain: 24 },
+        { vitality: 16, hp: 698, individualGain: 16 },
+        { vitality: 17, hp: 718, individualGain: 20 },
+        { vitality: 18, hp: 742, individualGain: 24 },
+        { vitality: 19, hp: 766, individualGain: 24 },
+        { vitality: 20, hp: 792, individualGain: 26 },
+        { vitality: 21, hp: 821, individualGain: 29 },
+        { vitality: 22, hp: 849, individualGain: 28 },
+        { vitality: 23, hp: 878, individualGain: 29 },
+        { vitality: 24, hp: 908, individualGain: 30 },
+        { vitality: 25, hp: 938, individualGain: 30 },
+        { vitality: 26, hp: 970, individualGain: 32 },
+        { vitality: 27, hp: 1001, individualGain: 31 },
+        { vitality: 28, hp: 1034, individualGain: 33 },
+        { vitality: 29, hp: 1066, individualGain: 32 },
+        { vitality: 30, hp: 1100, individualGain: 34 },
+        { vitality: 31, hp: 1123, individualGain: 23 },
+        { vitality: 32, hp: 1147, individualGain: 24 },
+        { vitality: 33, hp: 1170, individualGain: 23 },
+        { vitality: 34, hp: 1193, individualGain: 23 },
+        { vitality: 35, hp: 1216, individualGain: 23 },
+        { vitality: 36, hp: 1239, individualGain: 23 },
+        { vitality: 37, hp: 1261, individualGain: 22 },
+        { vitality: 38, hp: 1283, individualGain: 22 },
+        { vitality: 39, hp: 1304, individualGain: 21 },
+        { vitality: 40, hp: 1325, individualGain: 21 },
+        { vitality: 41, hp: 1346, individualGain: 21 },
+        { vitality: 42, hp: 1366, individualGain: 20 },
+        { vitality: 43, hp: 1386, individualGain: 20 },
+        { vitality: 44, hp: 1405, individualGain: 19 },
+        { vitality: 45, hp: 1424, individualGain: 19 },
+        { vitality: 46, hp: 1442, individualGain: 18 },
+        { vitality: 47, hp: 1458, individualGain: 16 },
+        { vitality: 48, hp: 1474, individualGain: 16 },
+        { vitality: 49, hp: 1489, individualGain: 15 },
+        { vitality: 50, hp: 1500, individualGain: 11 },
+        { vitality: 51, hp: 1508, individualGain: 8 },
+        { vitality: 52, hp: 1517, individualGain: 9 },
+        { vitality: 53, hp: 1526, individualGain: 9 },
+        { vitality: 54, hp: 1535, individualGain: 9 },
+        { vitality: 55, hp: 1544, individualGain: 9 },
+        { vitality: 56, hp: 1553, individualGain: 9 },
+        { vitality: 57, hp: 1562, individualGain: 9 },
+        { vitality: 58, hp: 1571, individualGain: 9 },
+        { vitality: 59, hp: 1580, individualGain: 9 },
+        { vitality: 60, hp: 1588, individualGain: 8 },
+        { vitality: 61, hp: 1597, individualGain: 9 },
+        { vitality: 62, hp: 1606, individualGain: 9 },
+        { vitality: 63, hp: 1615, individualGain: 9 },
+        { vitality: 64, hp: 1623, individualGain: 8 },
+        { vitality: 65, hp: 1632, individualGain: 9 },
+        { vitality: 66, hp: 1641, individualGain: 9 },
+        { vitality: 67, hp: 1649, individualGain: 8 },
+        { vitality: 68, hp: 1658, individualGain: 9 },
+        { vitality: 69, hp: 1666, individualGain: 8 },
+        { vitality: 70, hp: 1675, individualGain: 9 },
+        { vitality: 71, hp: 1683, individualGain: 8 },
+        { vitality: 72, hp: 1692, individualGain: 9 },
+        { vitality: 73, hp: 1700, individualGain: 8 },
+        { vitality: 74, hp: 1709, individualGain: 9 },
+        { vitality: 75, hp: 1717, individualGain: 8 },
+        { vitality: 76, hp: 1725, individualGain: 8 },
+        { vitality: 77, hp: 1734, individualGain: 9 },
+        { vitality: 78, hp: 1742, individualGain: 8 },
+        { vitality: 79, hp: 1750, individualGain: 8 },
+        { vitality: 80, hp: 1758, individualGain: 8 },
+        { vitality: 81, hp: 1767, individualGain: 9 },
+        { vitality: 82, hp: 1775, individualGain: 8 },
+        { vitality: 83, hp: 1783, individualGain: 8 },
+        { vitality: 84, hp: 1791, individualGain: 8 },
+        { vitality: 85, hp: 1799, individualGain: 8 },
+        { vitality: 86, hp: 1807, individualGain: 8 },
+        { vitality: 87, hp: 1814, individualGain: 7 },
+        { vitality: 88, hp: 1822, individualGain: 8 },
+        { vitality: 89, hp: 1830, individualGain: 8 },
+        { vitality: 90, hp: 1837, individualGain: 7 },
+        { vitality: 91, hp: 1845, individualGain: 8 },
+        { vitality: 92, hp: 1852, individualGain: 7 },
+        { vitality: 93, hp: 1860, individualGain: 8 },
+        { vitality: 94, hp: 1867, individualGain: 7 },
+        { vitality: 95, hp: 1874, individualGain: 7 },
+        { vitality: 96, hp: 1881, individualGain: 7 },
+        { vitality: 97, hp: 1888, individualGain: 7 },
+        { vitality: 98, hp: 1894, individualGain: 6 },
+        { vitality: 99, hp: 1900, individualGain: 6 }
+    ];    
+
     // Weapons data array with stats
     const weapons = {
         daggers: [
@@ -254,7 +356,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // ... TODO: Add other weapon categories
     };
 
-    // References to HTML elements
     const classSelect = document.getElementById('startClass');
     const soulLevel = document.getElementById('soulLevel');
     const vitality = document.getElementById('vitality');
@@ -282,6 +383,17 @@ document.addEventListener('DOMContentLoaded', () => {
         leftHand1.appendChild(option);
     });
 
+    function updateStats() {
+        const vitalityValue = parseInt(vitality.value, 10);
+        const hp = getHpFromVitality(vitalityValue);
+    
+        if(hp !== null) {
+            document.getElementById('hpValue').textContent = hp.toString();
+        }
+    
+        console.log('Stats updated');
+    }
+    
     function updateStatsForClass(selectedClass) {
         soulLevel.value = selectedClass.level;
         vitality.value = selectedClass.vitality;
@@ -293,44 +405,29 @@ document.addEventListener('DOMContentLoaded', () => {
         intelligence.value = selectedClass.intelligence;
         faith.value = selectedClass.faith;
         humanity.value = selectedClass.humanity;
-        // Update any additional stats here
+    
+        updateStats();
     }
 
-    // Event listener for the class selection dropdown
+    function getHpFromVitality(vitality) {
+        const row = vitalityTable.find(row => row.vitality === vitality);
+        return row ? row.hp : null;
+    }
+
     classSelect.addEventListener('change', (event) => {
         const selectedClass = classes.find(cls => cls.name.toLowerCase() === event.target.value);
         updateStatsForClass(selectedClass);
     });
 
-    // Initialize stats for the default selected class on page load
     updateStatsForClass(classes.find(cls => cls.name.toLowerCase() === classSelect.value));
 
-    // Function to update the UI with calculated stats
-    function updateStats() {
-        // Implement the stat calculation based on the user's selections and update the UI accordingly
-        // For now, just log 'Stats updated' to the console
-        console.log('Stats updated');
-    }
-
-    // Event listeners for stat changes
     soulLevel.addEventListener('change', updateStats);
     vitality.addEventListener('change', updateStats);
-    // ... Add event listeners for other stats as needed
+
+    updateStatsForClass(classes.find(cls => cls.name.toLowerCase() === classSelect.value));
 
     document.getElementById('calculate').addEventListener('click', () => {
         updateStats();
     });
 
-    function updateStats() {
-        // TODO: Implement the stat calculation based on the user's selections and update the UI accordingly
-        // This is a placeholder function. You need to define how stats are updated based on selections.
-        console.log('Stats updated');
-    }
-
-    // Event listener for the calculate button
-    document.getElementById('calculate').addEventListener('click', () => {
-        updateStats();
-    });
-
-    // Additional event listeners and logic can be added below as needed
 });

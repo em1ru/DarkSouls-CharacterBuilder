@@ -1,4 +1,3 @@
-/* Resets for consistent styling */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,10 +5,9 @@
 }
 
 body {
-    background-color: #f8f8f8; /* Adjust the background color as needed */
+    background-color: #f8f8f8;
 }
 
-/* Overall layout and typography */
 .container {
     font-family: 'Arial', sans-serif;
     max-width: 960px;
@@ -25,7 +23,6 @@ header h1 {
     margin-bottom: 20px;
 }
 
-/* Stats and Equipment sections */
 .stats, .equipment {
     background-color: #fff;
     padding: 10px;
@@ -41,15 +38,14 @@ header h1 {
 }
 
 label {
-    width: 150px; /* Adjust label width as needed to fit your layout */
+    width: 150px;
 }
 
 input[type="number"], select {
-    width: calc(100% - 160px); /* Adjust input/select width as needed */
+    width: calc(100% - 160px);
     padding: 5px;
 }
 
-/* Non-interactive stat display */
 .stat-display {
     display: flex;
     justify-content: space-between;
@@ -60,15 +56,13 @@ input[type="number"], select {
 
 .stat-display span {
     text-align: right;
-    padding-right: 10px; /* Aligns text to the right within the stat display box */
+    padding-right: 10px;
 }
 
-/* Equipment checkboxes */
 .equipment-row input[type='checkbox'] {
     margin-left: 10px;
 }
 
-/* Buttons for incrementing and decrementing stats */
 .button-inc-dec {
     background-color: #f2f2f2;
     border: 1px solid #dcdcdc;
@@ -82,14 +76,12 @@ input[type="number"], select {
     background-color: #e8e8e8;
 }
 
-/* Style for the class selector dropdown */
 .class-selector select {
     padding: 5px;
     font-size: 14px;
     margin-top: 10px;
 }
 
-/* Additional placeholder styles for stats like HP, Stamina, etc. */
 .placeholder-stat {
     background: #f0f0f0;
     border: 1px solid #ccc;
@@ -97,7 +89,6 @@ input[type="number"], select {
     text-align: center;
 }
 
-/* Active effects section */
 .active-effects {
     margin-top: 20px;
     padding: 10px;
@@ -105,7 +96,6 @@ input[type="number"], select {
     border: 1px solid #d9d9d9;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .stat-row, .equipment-row {
         flex-direction: column;
