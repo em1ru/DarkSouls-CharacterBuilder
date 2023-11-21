@@ -6,10 +6,11 @@
 
 body {
     background-color: #f8f8f8;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    color: #333; /* Dark gray for text */
 }
 
 .container {
-    font-family: 'Arial', sans-serif;
     max-width: 960px;
     margin: 20px auto;
     background: #fff;
@@ -19,44 +20,51 @@ body {
 
 header h1 {
     text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 28px; /* Slightly larger */
+    color: #222; /* Dark gray for headers */
+    margin-bottom: 30px; /* More space below header */
 }
 
-.stats, .equipment {
-    background-color: #fff;
-    padding: 10px;
-    margin-bottom: 10px;
+.stats, .equipment, .derived-stats {
+    background-color: #fafafa; /* Softer background color */
+    padding: 15px; /* More padding for spacing */
+    margin-bottom: 15px; /* More space between sections */
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.stat-row, .equipment-row {
+.stat-row, .equipment-row, .derived-stat {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 5px;
+    align-items: center;
+    margin-bottom: 10px; /* More space between rows */
 }
 
 label {
-    width: 150px;
+    flex-basis: 160px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    font-weight: 500; /* Slightly bolder labels for readability */
 }
 
 input[type="number"], select {
-    width: calc(100% - 160px);
-    padding: 5px;
+    flex-grow: 1;
+    padding: 10px; /* Larger padding for inputs */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff; /* White background for input fields */
 }
 
-.stat-display {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px 10px;
-    background: #eee;
-    margin-bottom: 10px;
-}
-
-.stat-display span {
+/* Styles for the spans to make them look like disabled input fields */
+.derived-stat span {
+    display: inline-block;
+    min-width: 60px;
+    padding: 10px;
+    background-color: #f2f2f2;
     text-align: right;
-    padding-right: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-left: auto; /* Align to the right */
 }
 
 .equipment-row input[type='checkbox'] {
@@ -64,20 +72,20 @@ input[type="number"], select {
 }
 
 .button-inc-dec {
-    background-color: #f2f2f2;
+    background-color: #e6e6e6; /* Softer button color */
     border: 1px solid #dcdcdc;
-    padding: 5px 10px;
+    padding: 7px 12px; /* Larger buttons */
     margin-left: 5px;
     cursor: pointer;
     font-size: 14px;
 }
 
 .button-inc-dec:hover {
-    background-color: #e8e8e8;
+    background-color: #dcdcdc;
 }
 
 .class-selector select {
-    padding: 5px;
+    padding: 7px;
     font-size: 14px;
     margin-top: 10px;
 }
@@ -85,7 +93,7 @@ input[type="number"], select {
 .placeholder-stat {
     background: #f0f0f0;
     border: 1px solid #ccc;
-    padding: 5px 10px;
+    padding: 7px 12px;
     text-align: center;
 }
 
@@ -97,12 +105,16 @@ input[type="number"], select {
 }
 
 @media (max-width: 768px) {
-    .stat-row, .equipment-row {
+    .stat-row, .equipment-row, .derived-stat {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .stat-row label, .equipment-row label {
+    .stat-row label, .equipment-row label, .derived-stat label {
         margin-bottom: 5px;
+    }
+
+    input[type="number"], select, .derived-stat span {
+        width: 100%; /* Make spans full width on small screens */
     }
 }
